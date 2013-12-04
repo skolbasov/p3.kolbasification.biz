@@ -1,0 +1,47 @@
+        .box{
+  			border:1px solid black;
+  			margin-top:25px;
+  			margin-left:25px;
+            width:100px;
+            height:100px;
+         	
+            float:left;
+
+        }
+
+        #important{
+        	-webkit-transform: rotate(90deg);
+        	 transform: rotate(90deg);
+        }
+
+#EisenhowerQuadrant{
+	
+	background-color:grey;
+	overflow: hidden;
+	width:275px;
+	height:275px;
+}
+
+
+        #urgentImportant{
+        
+        	background-color: green;
+        	}
+#urgentLessImportant{
+
+	background-color: blue;
+	float:bottom;
+
+}
+       #LessUrgentImportant{
+
+	background-color: orange;
+
+}
+#LessUrgentLessImportant{
+
+	background-color: red;
+
+
+}
+
