@@ -8,8 +8,25 @@
   <header>
     <h1>Eisenhower`s method</h1>
   </header>
+<form action="submitt">
+<label for='eventName'>Enter the event name</label>
+    <input type="text" class="text-field"  id="eventName" maxlength="240">
+    <br>
+<label for='eventName'>Enter the event date</label>
+    <input type="date" class="text-field"  id="eventDate">
+    <br>
+    <label for='eventStartTime'>Enter the event start time</label>
+    <input type="time" class="text-field"  id="eventStartTime">
+        <br>
+    <label for='eventEndTime'>Enter the event end time</label>
+    <input type="time" class="text-field"  id="eventEndTime">
+            <br>
+    <label for='eventDescription'>Enter the event description:</label><br>
+    <textarea class="text-field" id="eventDescription" rows="5" cols="50" 
+    title="Enter each requirement on a new line."></textarea>
+</form>
 
-
+<button id="calendarRequest">Request</button>
 
 <div id='EisenhowerQuadrant'>
   <label for='urgentImportant' id='urgent'>Urgent</label>
@@ -20,12 +37,6 @@
 <div id='LessUrgentLessImportant' class="box"></div>
 
 </div>
-<select>
-  <option value="">Concerts</option>
-  <option value="Cinema">Cinema</option>
-  <option value="Theatre">Theatre</option>
-
-</select>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/js/script.js"></script>
