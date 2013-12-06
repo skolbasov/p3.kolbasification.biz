@@ -4,13 +4,14 @@
 
         .box{
   			border:1px solid black;
-  			margin-top:15px;
-  			margin-left:15px;
-        width:160px;
-        height:160px;
+  			margin-top:5%;
+  			margin-left:5%;
+        margin-right:5%;
+        width:40%;
+        height:40%;
         float:left;
-        text-align:left;
         overflow:hidden;
+        text-align:left;
                         font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
         font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
         font-size: 11px;
@@ -59,22 +60,21 @@ text-align:left;
 
 .btn{
   border-radius: 3px;
-  margin:3px 3px 3px 3px;
+  margin:0px auto;
   position:relative;  
   top:3px;
 }
 
         #daySchedule{
-          overflow:auto;
-                    width:99%;
+                    width:50%;
                     height:400px;   
           border:1px solid black;
           
         }
 
 #EisenhowerQuadrant{
-	width:370px;
-  height:370px;
+	width:70%;
+  height:70%;
 	background-color:grey;
 	overflow: hidden;
   border-radius:5px;

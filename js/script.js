@@ -80,19 +80,20 @@ $("#eventEndTime").focusout(function(){
 })
 
 
-    $('#taskSubmit').click(function(){
+    $('#submitButton').click(function(){
+
+if (($("#eventName").val()=="")||($("#eventDate").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined)){
+	$("#errorDiv").html("some fields are empty");
+var event=new Event($("#eventName").val(),$("#eventDate").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
+
+console.log(event);
+} else{
+
   
 var event=new Event($("#eventName").val(),$("#eventDate").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
 
 events.push(event);
-$(".text-field").val('').removeAttr('checked');
 
-if (events.length==0){
-
-	console.log("events is empty");
-	$('#errorDiv').html("Submit some elements first");}
-
-	 else{
 
 
     	$('#daySchedule').html('');
@@ -101,30 +102,30 @@ if (events.length==0){
 for (x in events){
 	console.log(events[x]);
 }
-
+$('#urgentimportant').html('');
+$('#urgentnotImportant').html('');
+$('#notUrgentimportant').html('');
+$('#notUrgentnotImportant').html('');
 for (x in events){
-		$('#daySchedule').append("<div id='event"+x+"' class='"+events[x].eventUrgency+events[x].eventImportance+"'>Event date: "+events[x].eventDate+"<br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
+		$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'>Event date: "+events[x].eventDate+"<br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
 
 	if (events[x].eventUrgency=="urgent") {
 		if (events[x].eventImportance=="important"){
-		$('#urgentImportant').append(events[x].makeDiv());
-	} else $('#urgentNotImportant').append(events[x].makeDiv());
+		$('#urgentimportant').append(events[x].makeDiv());
+	} else $('#urgentnotImportant').append(events[x].makeDiv());
 	} else {
 		if (events[x].eventImportance=="important"){
-		$('#notUrgentImportant').append(events[x].makeDiv());
-	} else $('#notUrgentNotImportant').append(events[x].makeDiv());
+		$('#notUrgentimportant').append(events[x].makeDiv());
+	} else $('#notUrgentnotImportant').append(events[x].makeDiv());
 
 
 
 
 	}
 }
+//$(".text-field").val('').removeAttr('checked');
+$('#errorDiv').html('');	
 }
-
-
-
-
-
 });
 
 $('#printSchedule').click(function(){
@@ -136,7 +137,7 @@ $('#printSchedule').click(function(){
     
     
     new_tab_contents += '<head>';
-    new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">';
+    new_tab_contents += '<link rel="stylesheet" href="css/print.css" type="text/css">';
     new_tab_contents += '</head>';
     new_tab_contents += '<body>'; 
     new_tab_contents += canvas;
@@ -157,7 +158,7 @@ $('#printQuadrant').click(function(){
     
     
     new_tab_contents += '<head>';
-    new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">';
+    new_tab_contents += '<link rel="stylesheet" href="css/print.css" type="text/css">';
     new_tab_contents += '</head>';
     new_tab_contents += '<body>'; 
     new_tab_contents += canvas;

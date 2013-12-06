@@ -7,34 +7,33 @@
    </head>
 <body>
   <header>
-    <h1>Eisenhower`s method</h1>
+    <h1>Eisenhower`s method of time management</h1>
   </header>
 <div id="wrapper" class="wrapper">
 <div id="inputForm" class="column">
-<label for='eventName'>Enter the event name</label>
+    <label for='eventName'>Enter the event name</label>
     <input type="text" class="text-field"  id="eventName" maxlength="240" >
-    <br>
-<label for='eventDate'>Enter the event date</label>
+    
+
+    <br><label for='eventDate'>Enter the event date</label>
     <input type="date" class="text-field"  id="eventDate" >
-    <br>
-    <label for='eventStartTime'>Enter the event start time</label>
+    
+    <br><label for='eventStartTime'>Enter the event start time</label>
     <input type="time" class="text-field"  id="eventStartTime" >
-        <br>
-    <label for='eventEndTime'>Enter the event end time</label>
+        
+    <br><label for='eventEndTime'>Enter the event end time</label>
     <input type="time" class="text-field"  id="eventEndTime" ></input>
-            <br>
-    <label for='eventDescription'>Enter the event description:</label><br>
+          
+    <br><label for='eventDescription'>Enter the event description:</label><br>
     <textarea class="text-field" id="eventDescription"></textarea>
-    <br>
-     
-    <input type="radio" name="urgencySelector" class="text-field" value="urgent" id="urgent">Urgent</input>
+    
+    <br><input type="radio" name="urgencySelector" class="text-field" value="urgent" id="urgent">Urgent</input>
     <input type="radio" name="urgencySelector" class="text-field" value="notUrgent" id="notUrgent">Not urgent</input>
-<br>
-  <input type="radio" name="importanceSelector" class="text-field" value="important" id="important">Important</input>
+
+    <br><input type="radio" name="importanceSelector" class="text-field" value="important" id="important">Important</input>
     <input type="radio" name="importanceSelector" class="text-field" value="notImportant" id="notImportant">Not important</input>
 
-
-    <br><button id="taskSubmit" class="btn">Add to the tasks list</button>
+    <br><button id="submitButton" class="btn">Add to the tasks list</button>
     
     <div id="errorDiv"></div>
     <div id="hintDiv"></div>
@@ -49,20 +48,16 @@
 <div id='eisenhowerWrapper' class="column">
 <div id='eisenhowerQuadrant'>
 
-<div id='urgentImportant' class="box"></div>
-<div id='urgentNotImportant' class="box"></div>
-<div id='notUrgentImportant' class="box"></div>
-<div id='notUrgentNotImportant' class="box"></div>
+<div id='urgentimportant' class="box urgentimportant"></div>
+<div id='urgentnotImportant' class="box urgentnotImportant"></div>
+<div id='notUrgentimportant' class="box notUrgentimportant"></div>
+<div id='notUrgentnotImportant' class="box notUrgentnotImportant"></div>
 
 </div>
 <button id="printQuadrant" class="btn">Print the quadrant</button>
 </div>
 
 </div>
-
-
-
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <script src="/js/script.js"></script>
