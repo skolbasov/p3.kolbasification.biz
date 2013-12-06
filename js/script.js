@@ -127,10 +127,6 @@ for (x in events){
 
 });
 
-    $('#fillQuadrant').click(function(){
-
-
-    })
 $('#printSchedule').click(function(){
 
     var daySchedule_clone = $('#daySchedule').clone();

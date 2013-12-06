@@ -4,43 +4,53 @@
   			margin-left:25px;
             width:100px;
             height:100px;
-         	
             float:left;
 
         }
+
         #hintDiv{
           color:black;
         }
         #errorDiv{
           color:red;
         }
+        .column{
+          float:left;
+          overflow:hidden;
+          text-align: center;
+          width:30%;
+          margin-left:20px;
+          margin-right:20px;
+        }
+        #wrapper{
+          overflow:hidden;
+        }
         #inputForm{
-width: 35%; 
-float:left;}
+text-align:left;
+}
 
 .btn{
   border-radius: 3px;
-  position:relative;
   margin:0px auto;
-  display: inline-block;
--webkit-writing-mode: horizontal-tb;
+  position:relative;  
+  top:3px;
 }
-        
+
         #daySchedule{
+                    width:99%;
+                    height:400px;   
           border:1px solid black;
-          overflow:hidden;
-          width: 20%; 
-          float:left;           
+          
         }
 
 #EisenhowerQuadrant{
 	
 	background-color:grey;
 	overflow: hidden;
-	width:275px;
-	height:275px;
   border-radius:5px;
+  float:left;
 }
+
 
 
         #urgentImportant{
@@ -50,7 +60,7 @@ float:left;}
 #urgentNotImportant{
 
 	background-color: blue;
-	float:bottom;
+	//float:bottom;
 
 }
        #notUrgentImportant{

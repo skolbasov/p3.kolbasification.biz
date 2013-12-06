@@ -9,8 +9,8 @@
   <header>
     <h1>Eisenhower`s method</h1>
   </header>
-<div id="wrapper">
-<div id="inputForm">
+<div id="wrapper" class="wrapper">
+<div id="inputForm" class="column">
 <label for='eventName'>Enter the event name</label>
     <input type="text" class="text-field"  id="eventName" maxlength="240" >
     <br>
@@ -34,24 +34,28 @@
     <input type="radio" name="importanceSelector" class="text-field" value="notImportant" id="notImportant">Not important</input>
 
 
-    <br><button id="fillQuadrant" class="btn">Add to the tasks list</button>
+    <br><button id="taskSubmit" class="btn">Add to the tasks list</button>
     
     <div id="errorDiv"></div>
     <div id="hintDiv"></div>
 
 </div>
-<div id="Schedule">
+<div id="scheduleWrapper" class="column">
 <div id="daySchedule">
-  <button id="printSchedule" class="btn">Print</button>
+
 </div>
+  <button id="printSchedule" class="btn">Print the schedule</button>
 </div>
+<div id='eisenhowerWrapper' class="column">
 <div id='eisenhowerQuadrant'>
 
 <div id='urgentImportant' class="box"></div>
 <div id='urgentNotImportant' class="box"></div>
 <div id='notUrgentImportant' class="box"></div>
 <div id='notUrgentNotImportant' class="box"></div>
-<button id="printQuadrant" class="btn">Print</button>
+
+</div>
+<button id="printQuadrant" class="btn">Print the quadrant</button>
 </div>
 
 </div>
