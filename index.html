@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+   <meta charset='utf-8' />
 <title>Feel the power of the Eisenhower
 </title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
@@ -8,37 +9,66 @@
   <header>
     <h1>Eisenhower`s method</h1>
   </header>
-<form action="submitt">
+<div id="wrapper">
+<div id="inputForm">
 <label for='eventName'>Enter the event name</label>
-    <input type="text" class="text-field"  id="eventName" maxlength="240">
+    <input type="text" class="text-field"  id="eventName" maxlength="240" >
     <br>
-<label for='eventName'>Enter the event date</label>
-    <input type="date" class="text-field"  id="eventDate">
+<label for='eventDate'>Enter the event date</label>
+    <input type="date" class="text-field"  id="eventDate" >
     <br>
     <label for='eventStartTime'>Enter the event start time</label>
-    <input type="time" class="text-field"  id="eventStartTime">
+    <input type="time" class="text-field"  id="eventStartTime" >
         <br>
     <label for='eventEndTime'>Enter the event end time</label>
-    <input type="time" class="text-field"  id="eventEndTime">
+    <input type="time" class="text-field"  id="eventEndTime" ></input>
             <br>
     <label for='eventDescription'>Enter the event description:</label><br>
-    <textarea class="text-field" id="eventDescription" rows="5" cols="50" 
-    title="Enter each requirement on a new line."></textarea>
-</form>
+    <textarea class="text-field" id="eventDescription"></textarea>
+    <br>
+     
+    <input type="radio" name="urgencySelector" class="text-field" value="urgent" id="urgent">Urgent</input>
+    <input type="radio" name="urgencySelector" class="text-field" value="notUrgent" id="notUrgent">Not urgent</input>
+<br>
+  <input type="radio" name="importanceSelector" class="text-field" value="important" id="important">Important</input>
+    <input type="radio" name="importanceSelector" class="text-field" value="notImportant" id="notImportant">Not important</input>
 
-<button id="calendarRequest">Request</button>
 
-<div id='EisenhowerQuadrant'>
-  <label for='urgentImportant' id='urgent'>Urgent</label>
-    <label for='urgentImportant'id='important'>Important</label>
+    <br><button id="fillQuadrant" class="btn">Add to the tasks list</button>
+    
+    <div id="errorDiv"></div>
+    <div id="hintDiv"></div>
+
+</div>
+<div id="Schedule">
+<div id="daySchedule">
+  <button id="printSchedule" class="btn">Print</button>
+</div>
+</div>
+<div id='eisenhowerQuadrant'>
+
 <div id='urgentImportant' class="box"></div>
-<div id='urgentLessImportant' class="box"></div>
-<div id='LessUrgentImportant' class="box"></div>
-<div id='LessUrgentLessImportant' class="box"></div>
+<div id='urgentNotImportant' class="box"></div>
+<div id='notUrgentImportant' class="box"></div>
+<div id='notUrgentNotImportant' class="box"></div>
+<button id="printQuadrant" class="btn">Print</button>
+</div>
 
 </div>
 
+
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <script src="/js/script.js"></script>
+
+    <script>
+
+
+
+  </script>
+ 
+
 </body>
 </html>
