@@ -4,11 +4,11 @@
 
         .box{
   			border:1px solid black;
-  			margin-top:5%;
-  			margin-left:5%;
-        margin-right:5%;
-        width:40%;
-        height:40%;
+  			margin-top:10px;
+  			margin-left:10px;
+
+        width:230px;
+        height:230px;
         float:left;
         overflow:hidden;
         text-align:left;
@@ -73,10 +73,9 @@ text-align:left;
         }
 
 #EisenhowerQuadrant{
-	width:70%;
-  height:70%;
+	width:500px;
+  height:500px;
 	background-color:grey;
-	overflow: hidden;
   border-radius:5px;
   float:left;
 }
